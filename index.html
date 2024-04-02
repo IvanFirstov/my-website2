@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ты меня любишь?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    #circle {
+        width: 200px;
+        height: 200px;
+        background-color: #ffcccc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto;
+    }
+    
+    #question {
+        font-size: 24px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div id="circle">
+    <div id="question">Ты меня любишь?</div>
+</div>
+<button class="btn" id="yesBtn">Да</button>
+<button class="btn" id="noBtn">Нет</button>
+
+<script>
+    const question = document.getElementById('question');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    yesBtn.addEventListener('click', () => {
+        question.textContent = 'И я тебя, солнышко)';
+    });
+
+    noBtn.addEventListener('mouseover', () => {
+        noBtn.textContent = 'Да';
+    });
+
+    noBtn.addEventListener('mouseout', () => {
+        noBtn.textContent = 'Нет';
+    });
+
+    noBtn.addEventListener('click', () => {
+        question.textContent = 'И я тебя(';
+    });
+</script>
+</body>
+</html>
